@@ -1,7 +1,8 @@
-import { getPokemont } from './generics/get-pokemon';
+import Pokemon from './decoretors/pokemon-class';
 
-getPokemont(1)
-  .then( pokemon => console.log( pokemon.sprites.front_default))
-  .catch( err => console.log(err))
-  .finally( () => console.log('fin de promesa'))
-  
+const charmander = new Pokemon('charmander');
+
+//(Pokemon.prototype as any).customName = 'hola';
+
+charmander.publicApi = 'holaaaa';
+ console.log( charmander );
